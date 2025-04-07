@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inter,sans-serif;
+}
+
+.header {
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(40, 44, 63, 0.15) 0px 15px 40px -20px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+    padding: 2rem;
+    background: rgb(250, 250, 250);
+}

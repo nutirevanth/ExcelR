@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: 400px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        button{
+            color: aqua;
+            background-color: black;
+        }
+        fieldset{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action method="get"> 
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="fname">First Name</label>
+            <input type="text" placeholder="Enter your Name"  id="fname" name="fname"><br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" placeholder="enter your Last Name" id="lname" name="lname"><br>
+            <label for="age">Age</label>
+            <input type="number" name="Age" id="age" min="10" max="50" placeholder="enter your Age"><br>
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" value="male" >
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other" checked>
+            <label for="other">Other</label>
+            <br><br>
+
+            <label for="dob">Date of birth</label>
+            <input type="datetime-local" name="dob" id="dob">
+            <br><br>
+            <label for="img">Upload image</label>
+            <input type="file" name="image" id="img" accept="image/**">
+        </fieldset>
+
+        <fieldset>
+            <legend>Favourites</legend>
+            <label for="color">Favourite color</label>
+            <input type="checkbox" name="color" id="red">
+            <label for="red">Red</label>
+            <input type="checkbox" name="color" id="green">
+            <label for="green">Green</label>
+            <input type="checkbox" name="color" id="blue">
+            <label for="blue">Blue</label>
+            <br><br>
+            <label for="item">Favourite Food Item</label>
+            <select name="item" id="item">
+                <option value="">Select Food</option>
+                <optgroup label="Tiffins">
+                <option value="idly">Idly</option>
+                <option value="dosa">dosa</option>
+                <option value="puri">puri</option>
+            </optgroup>
+            <optgroup label="Non Veg">
+                <option value="idly">Birayni</option>
+                <option value="dosa">kfc</option>
+                <option value="puri">burger</option>
+            </optgroup>
+            </select>
+            <br><br>
+            <label for="sub">Subjects</label>
+            <select name="subject" id="sub" multiple size="2">
+                <option value="maths">maths</option>
+                <option value="maths">english</option>
+                <option value="maths">civis</option>
+                <option value="maths">coding</option>
+            </select>
+            <br><br>
+            <label for="game">Games</label>
+            <input name="game" id="game" list="games">
+            <datalist id="games">
+                <option value="cricket"></option>
+                <option value="volley ball"></option>
+                <option value="hockey"></option>
+            </datalist>
+
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone"  placeholder="enter your phone number" pattern="[0-9]{10}"><br><br>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="password" placeholder="enter your password" required><br><br>
+            <label for="address">Address</label>
+            <textarea name="address" id="address" placeholder="enter your address" required></textarea>
+        </fieldset>
+        <br>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+
+</form>
+</body>
+</html>
