@@ -1,0 +1,34 @@
+what are callback functions
+           -- it is a function that is passed as an argument to another function
+
+callback hell(pyramid of doom)
+---------------------------------
+   -it is a situation where we have multiple callbacks inside a callback(nested callbacks)
+   -hard to read       
+   -hard to maintain/modify 
+   -hard to debug
+   -this usually happens when we have to perform multiple asynchronous operations
+   
+-----------------------------------------------------------------------------
+promises:
++++++++++++++++
+ - a promise in js is an object that represents the outcome of an asynchronous operation
+ - it is used to handle the success and failure of an asynchronous operation
+ - states in promises :
+     1. pending-initial state
+     2. fulfilled-the operation was successful
+     3. rejected-the operation failed
+ - we can use then() function to handle the success and failure of a promise
+ - we can use catch() function to handle the failure of a promise
+ - we can use finally() function to handle the success and failure of a promise
+
+
+
+
+async & awit keywords
+Promise.all()
+Promise.race()
+Promise.allSettled()
+Promise.all()
+JQuery Integration
+Examples on JQuery
