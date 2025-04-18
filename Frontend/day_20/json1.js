@@ -60,22 +60,104 @@
 
 //  fetchData();
 
- const json1={
-    "name":"john",
-    "age":20,
-    "city":"new york"
- }
 
- const json2={
-    "name":"peter",
-    "age":22,
-    "city":"ongole"
- }
 
- console.log(json1);
- console.log(json2);
- json1.age=45;
- console.log(json1)
- delete json2.age;
+// async function fetchData() {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+//     const data = await response.json();
+//     console.log(data);
+//     console.log(data.name);
+//     console.log(data.company.name)
+//     console.log(data.address["street"]);
+
+//     console.log(Object.keys(data));//keys of the object
+//     console.log(Object.values(data));//values of the object
+//     console.log(Object.entries(data));//entries(key-value) of the object
+    
+//   }
+//   fetchData();
+
+
+const json1={
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+// const json2={
+//     "email": "p7NlQ@example.com",
+//     "phone": "1234567890"
+// }
+// console.log(json1);
+// console.log(json2);
+// json1.phone=345678;
+// json1["email"]=json2.email;
+
+
+//  delete json2.phone;
+//  delete json2["email"];
+// const merged_json=Object.assign(json1,json2);
+// const merged_json={...json1,...json2};
+// console.log(merged_json);
+
+//  const json1={
+//     "name":"john",
+//     "age":20,
+//     "city":"new york"
+//  }
+
+//  const json2={
+//     "name":"peter",
+//     "age":22,
+//     "city":"ongole"
+//  }
+
+//  console.log(json1);
+//  console.log(json2);
+//  json1.age=45;
+//  console.log(json1)
+//  delete json2.age;
 //  const merged_json=Object.assign(json1,json2);
 //  console.log(merged_json);
+
+// console.log(json1);
+// for(let key in json1){
+//     console.log(key+" : "+json1[key]); 
+// }
+// Object.keys(json1).forEach(key => {
+//     console.log(key+" : "+json1[key]); 
+// });  
+// Object.entries(json1).forEach(key => {
+//     console.log(key+" : "+json1[key]);  
+// });  
+// Object.values(json1).forEach(value => {
+//     console.log(value);  
+// });  
+ 
+
+const user={
+    "name": "John",
+    "age": 30,
+    "city": "New York",
+    "skills": ["JavaScript", "Python", "Java"],
+   
+}
+// destructuring the object
+ const {name,age}=user;
+console.log(name);
+console.log(age);
+// console.log(city);
+
+// destructing and renaming the object
+const{name:userName , age:userAge}=user;
+console.log(userName);
+
+// destructing and adding default value to the object
+const{country="India"}=user;
+console.log(country);
+
+
+
+
+
+
+
