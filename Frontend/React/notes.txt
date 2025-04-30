@@ -77,3 +77,88 @@ components:
           (import in main.jsx file)
 
 ------------------------------------------------------------------------
+component :(ui component)
+   ex: header component , footer component , sidebar component...etc
+      -it is a function/class that returns jsx code
+      -it is a reusable component 
+      -it is a file that contains jsx code (html in js file)
+      -we can create a component in two ways :
+         1.function component
+         2.class component
+
+1.functional component :
+syntax:
+
+function component_name(){
+   return(
+      <>
+      //jsx code
+      </>
+   )
+}
+
+2.class component :
+syntax:
+class component_name extends React.Component{
+   render(){
+      return(
+         <>
+         //jsx code
+         </>
+      )
+   }
+}
+
+----------------------------------------------------------------------------------------------
+                     function                                     class
+----------------------------------------------------------------------------------------------
+syntax:             js function                                   Es6 class syntax
+render()            not required                                   required
+state                 useState hook                                      this.state
+props                 props                                           this.props
+this key            not required                                    required
+readability          clean                                         more boilerplate
+preferred           modern standard                               older standard(depricated)
+-------------------------------------------------------------------------------------------------
+state:
+   -state is an object that contains data the component needs.
+   -it is used to store/update/manage the data that component needs to render
+   -we can modify the state in the component with the help of 
+      setState() method. or this.setState() method
+
+ syntax: let [state /data, setState]=useState(initialState)
+ex: 
+   1.let [count, setCount] = useState(0)
+   2.let [name , setName] = useState('')
+   3.let [user , setUser] = useState({})
+   4.let[fruits, setFruits] = useState([])
+   5.let[isTrue, setIsTrue] = useState(true)
+
+setstate() method:
+   -it is a function used to update 
+   -it is used to update the state of the component
+
+usestate() hook:
+   -it is a hook that returns an array of two elements.
+   -the first element is the state variable
+   -the second element is the function that updates the state variable
+   -it is used to manage the state of the component
+hooks:
+   -it is a function(special) that returns the jsx code.
+   ex: useState(),useEffect(),useRef(),useContext()
+
+---------------------------------------------------------------------------------
+
+props:(properties)
+   -props is an object that contains the data that the component needs
+   -it is used to pass the data from parent component to child component
+   -we can access the props data in the component with the help of props.
+--------------------------------------------------------------------------------------------------------------------
+                        state                                  props
+--------------------------------------------------------------------------------------------------------------------
+definiton            used to update                            used to pass/transfer(parent to child)
+mutability           mutable                                   immutable
+managed              by itself                                    by parent component 
+access               by itself                                    by child componrent
+                     this.state/usestate()                     props/{name,age}
+--------------------------------------------------------------------------------------------------------------------   
