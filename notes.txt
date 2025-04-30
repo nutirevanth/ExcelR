@@ -1,0 +1,4 @@
+components:
+1.create jsx file
+2.declare the jsx code(function)
+3.return 
