@@ -9,6 +9,10 @@ import Example2 from './States/Example2.jsx'
 import Example3 from './States/Example3.jsx'
 import Parent from './props/Parent.jsx'
 import Parent2 from './props/Parent2.jsx'
+import Parent3 from './props/Parent3.jsx'
+import Parent4 from './props/Parent4.jsx'
+import GrandParent from './props/propsdriling.jsx'
+import GrandParentcontext from './context/contextParent.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +22,10 @@ createRoot(document.getElementById('root')).render(
     {/* <Example2/> */}
     {/* <Example3/> */}
     {/* <Parent/> */}
-    <Parent2/>
+    {/* <Parent2/> */}
+    {/* <Parent3/> */}
+    {/* <Parent4/> */}
+    {/* <GrandParent/> */}
+    <GrandParentcontext/>
   </StrictMode>,
 )

@@ -153,6 +153,9 @@ props:(properties)
    -props is an object that contains the data that the component needs
    -it is used to pass the data from parent component to child component
    -we can access the props data in the component with the help of props.
+   -props are read-only
+   -we can't modify the props data in the component
+   -props are immutable
 --------------------------------------------------------------------------------------------------------------------
                         state                                  props
 --------------------------------------------------------------------------------------------------------------------
@@ -162,3 +165,14 @@ managed              by itself                                    by parent comp
 access               by itself                                    by child componrent
                      this.state/usestate()                     props/{name,age}
 --------------------------------------------------------------------------------------------------------------------   
+Day-29 :
+--------
+props drilling :
+   -it is a technique that is used to pass data from parent component to child component 
+
+ex: Grand parent --->Parent--->child--->Grand child
+   -it makes difficult to code 
+   -it causes deep component hierarchy
+   -it causes code maintability
+   -to avoid props drilling we can use context api 
+------------------------------------------------------------------------------------------------
