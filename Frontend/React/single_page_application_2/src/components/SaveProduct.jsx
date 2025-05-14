@@ -86,4 +86,4 @@ const SaveProduct = () => {
   )
 }
 
-export default SaveProduct
+export default SaveProduct;
