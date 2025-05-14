@@ -482,4 +482,83 @@ custom hook:
       return ;
   }
   export default customHookName;
-   
+  ---------------------------------------------------------------------
+  Redux:
+  -----
+  -it is a state management library .
+  -it is predictable state container for js (mainly used in react).
+  -it is used to manage the state of the application .
+  
+redux architecture:
+    -it follows a uni directional data flow.
+
+flow:
+ui-->action-->dispatch-->reducer-->store
+
+components:
+-----------
+1.view(ui)
+2.state - it is a data 
+3.action - it is an event(trigger)
+         -it is an object it consist type and payload(describes the data of the event).
+4.reducer - it is used to update/manage the state of the application.
+5.store   - it is used to store the state of the application.
+6.dispatch - it is dispatch the action of the reducer
+7.middleware - it is used to modify the action before it is dispatched to the reducer.
+             -it intecepts the action before it is dispatched to the reducer
+             -it is used to add extra logic,functionality , vadilations,security etc to the action.
+             -it provides a third party extension point to modify the action before it is dispatched to the reducer.
+             -mainly used for the logging,security,api calls etc
+
+1.thunk - middleware function which handles async logic.
+2.saga - middleware function(generator) which handles async logic 
+-----------------------------------------------------------------------------------------------
+commands:
+
+    npm install redux 
+    npm install react-redux 
+    npm install redux-thunk 
+    npm install redux-sage 
+
+ npm create vite@latest
+    provide project_name
+    framework: react
+    variant: JavaScript
+    cd project_name
+    npm install bootstrap redux react-redux
+    npm run dev
+
+
+    project structure
+    ----------------
+    src
+    |__App.jsx
+    |__main.css
+    |__main.jsx
+    |__App.css
+    |__store -CounterStore.jsx
+    |__actions -CounterActions.jsx
+    |__reducers -CounterReducers.jsx
+
+flow:
+     view(ui) -creating a jsx file to display the ui
+        |
+calling functions when event triggers - creating a actiion.jsx file  to create a function to handle events
+        |
+        |
+        |
+dispatching the state of the application - creating a reducer.jsx file to update the state of the application
+        |
+        |
+        |
+updating the state of the application - creating a store.jsx file to store the state of the application 
+        |
+        |
+        |the redux context need to be enclosed in <provider> tag
+        |
+view(ui) displaying the output - by acessing the data from store using useselector hook
+
+1.creation of action
+2.creation of reducer
+3.creation of store
+             
