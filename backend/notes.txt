@@ -1,0 +1,726 @@
+Java:
+-----
+    -java is a programming language
+    -java is a high level language, object oriented language,
+     class based language
+    -java is a platform independent language
+    - we can develop desktop application ,web application, mobile application etc
+
+
+History:
+-------
+    -java was developed in 1991 by  sun micro system 
+              -james gosling(green team)
+              -patrick
+              -Mike
+            
+    -java was introduced in 1995 by james gosling(father of java)
+    -in the year of 1996 they released java 1.0(jdk 1.0)
+         jdk-java development kit
+         jre-java runtime environment
+         jvm-java virtual machine
+
+jdk-it consist of jre  and development tools
+jre-it consist of jvm and set of libraries
+jvm-it consist of bytecode interpreter  , used to execute bytecode
+
+
+
+platform independent:
+---------------------
+     - it means write code once run anywhere(WORA)
+     - to execute a java file we need 
+         1.compiler:
+                   - it is a tool which converts source code into byte code
+                   - ___.java(source code) ----->____.class(bytecode)
+
+         2.interpreter:
+                   - it is a jvm which executes bytecode
+
+Note : java is a platform independent but jvm dependent
+
+java features:
+-------------
+1.platform independent
+2.object oriented:
+               1.inheritance
+               2.polymorphism
+               3.encapsulation
+               4.abstraction
+3.java is simple and easy to learn
+4.java is secure :
+               -no pointers, which eliminate the need for memory management
+               -java has a inbuilt security manager which prevents
+                 unauthorized access to the system
+5.java is robust:
+                 -strong management of memory
+                 -it has a garbage collector which deletes
+                  unused objects
+6.java is multi threaded
+                - supports multi threading, allowing you to run 
+                 multiple tasks at the same time
+7.java is dynamic language and case sensitive
+8.java has rich standard library
+------------------------------------------------------------------------
+
+java structure:
+---------------
+
+   class className{
+    
+    public static void main(String[]args){
+        ------
+        ------
+        ------
+        }
+    }
+
+Note : main method is the entry point of java program
+       without main method java program will not run but we can compile
+         
+-----------------------------------------------------------------------------
+Tokens :
+      - tokens are the basic building blocks of a java program
+      - tokens are used to define the structure of a java program
+      - tokens are the elements of a java program 
+      - types :
+              1.keywords
+              ++++++++++
+                        :inbuilt words and reserved words
+                        :all keywords are in lowercase
+                    ex: public static void if else for while switch case 
+
+              2.identifiers
+              +++++++++++++
+                       : names providing by programmer or developer
+                       
+                Rules:(mandatory)
+                       : keywords cannot be used as identifiers
+                       : identifiers are not start with digits and 
+                         special characters except $ and _
+                Conventions:(optional but recommended)
+                       : identifiers should be in camel case
+                       ex: firstNameProgram
+                       : for class/interface name use pascal case
+                       ex: FirstNameProgram
+                       : for method and variable name use snake case/camel case
+                       ex: first_name
+
+              3.literals
+              +++++++++++
+                        : literal is a value/data assigned to a variable
+
+                ex:    int        valueName        =        10
+                     datatype    identifier   assigning   value/literal
+
+Data types:
+           1.primitive data types
+
+                      Number
+                        |
+        ------------------------------------
+        |                                  |
+        Integer                        Decimal
+        |                                  |
+        -----------------------      ----------------   
+    |      |        |         |      |              |                     
+   byte   short    int       long    float        double 
+
+              datatype         size             range
+                1.byte  - 1 byte - 8 bits    -128 to 127
+                2.short - 2 bytes - 16 bits  -32768 to 32767
+                3.int   - 4 bytes - 32 bits  -2147483648 to 2147483647
+                4.long  - 8 bytes - 64 bits  -9223372036854775808 to 9223372036854775807
+                5.float - 4 bytes - 32 bits  -3.4E38 to 3.4E38
+                6.double- 8 bytes - 64 bits  -1.7E308 to 1.7E308
+                7.char  - 2 bytes - 16 bits  -32768 to 32767
+                8.boolean - 1 byte - 8 bits  -true or false
+           2.non primitive data types
+                1.string
+                2.array
+                3.object
+                4.wrapper classes
+                5.enum
+                6.annotation
+                7.Collections
+-----------------------------------------------------------------------------
+variables:
+-----------
+        - variables are used to store data/ values
+
+      based on datatype:  
+        - if we storing primitive datatype then it is called primitive variable
+            int a=10;   (a- primitive variable)
+        - if we storing non primitive datatype then it is called non primitive variable
+            String b="hello";  (b- non primitive variable)
+
+      based on scope:
+        - if we storing variable inside method/constructor then it is called local variable
+         Note : local variable can be accessed only inside method/constructor but not outside
+        - if we storing variable inside class and outside method then it is called global variable
+         Note : global variable can be accessed inside and outside method
+                global variables are two types:   
+                     1.static variable
+                     2.instance/non static variable
+
+
+variable declaration:
+             -providing name to a variable
+ex: int a;
+variable initialization: 
+              -assigning a value to a variable
+ex:  a=10;    ex2: int b=30;
+variable reinitialization:
+              -reassigning a value to a variable
+              (removing old value and adding new value)
+ex: int a=20;    
+        a=30;
+
+Note : local variable can be used after it is initialized
+       global variable can be used before it is initialized and it gives
+       default value according to datatype
+
+              4.operators:
+              +++++++++++
+                       1.arithmetic operators  
+                               ---> + - * / %  (binary operator)
+                       2.relational operators  
+                               ---> < > <= >= == != (binary operator)
+                       3.logical operators     
+                               ---> && || (binary operator) !(unary operator)
+                       4.assignment operators  
+                              ---> = += -= *= /= %= (binary operator)
+                       5.bitwise operators     
+                              ---> & | ^ ~ << >> (binary operator)
+                       6.conditional operators 
+                              ---> (operand1?operand2:operand3) (ternary operator)
+                       7.increment/decrement operators
+                              ---> ++ -- (unary operator)
+                       8.access operator (.) -unary operator
+
+Precedence / priority of operators:   
+              1.()
+              2.unary operators
+              3.multiplication/division
+              4.addition/subtraction
+              5.relational operators
+              6.equality operators
+              7.logical  and operator
+              8.logical or operator
+              9.ternary operator
+
+              5.separators
+              ++++++++++++
+                       1.comma
+                       2.semicolon
+                       3.curly brackets
+                       4.parenthesis
+
+
+Note : tokens are case sensitive
+-----------------------------------------------------------------------------
+creating java project in eclipse:
+
+        clt+N---->choose java project in wizard----->next
+        provide projectName ---->next---->finish 
+
+package: 
+       - it is a folder which contains java classes and interface.
+       - a file must be unique in a package.
+library (jar file):
+       - it consist collection of packages
+jre system library:
+       - it consist collection of jar files(libraries)
+------------------------------------------------------------------------------------
+
+Casting :
+        -converting one data type to another data type
+        -there are two types of casting:
+            1.primitive type casting
+                   - convert one primitive data type to another primitive data type
+                   -1.implicit casting : it is done automatically by the compiler
+                   -2.explicit casting : it is done manually by the developer ,
+                                         so need to use cast operator ()
+-------------------------------------------------------------------------------------
+                                    implicit                         explicit
+-------------------------------------------------------------------------------------
+also known as                      widening  typecasting        narrowing typecasting
+conversion                         small to big                 big to small 
+cast operator                      optional                     mandatory
+loss of data                       no                           yes
+example                            byte-->double                double------>byte 
+-------------------------------------------------------------------------------------
+order of data types:
+  byte (8 bits)<short(16 bits)
+                               <int (32 bits)<long (64 bits)<float (32 bits)<double(64 bits)
+               <char(16 bits)
+   
+
+            2.Non primitive type casting
+------------------------------------------------------------------------------------
+Statements :
+    1.Conditional Statements:
+    --------------------------
+             - statements(block of code) will execute based on condition
+             Types :
+                 1.if statement
+                        syntax:
+                        if(condition){
+                            // if condition satisfy block of code will execute
+                        }
+                 2.if-else statement
+                        syntax:
+                        if(condition){
+                            // if condition satisfy block of code will execute
+                        }else{
+                            // if condition not satisfy block of code will execute
+                        }
+                 3.if-else-if ladder
+                    syntax:
+                    if(condition){
+                        // if condition satisfy block of code will execute
+                    }
+                    else if(condition){
+                        // if condition satisfy block of code will execute
+                    }
+                    .
+                    .
+                    else{
+                        // if all conditions not satisfy block of code will execute
+                    }
+                 4.switch statement
+                    syntax:
+
+                    switch(expression/value/variable/constant/){
+                         case value1:{
+                            // if value matches  block of code will execute  
+                         } break;
+                         case value2:{
+                            // if value matches block of code will execute
+                         }break;
+                         .
+                         .
+                         case valueN:{
+                            // if value matches block of code will execute
+                         }break;
+                         default:{
+                            // if all cases not matches block of code will execute
+                         }break;
+                    }
+
+Note : 1.break statement is used to terminate the flow(optional)
+       2.default statement is used to execute block of code when all 
+          cases not matches(optional)
+       3.cases must be unique and must be in ascending order
+       4.switch will accept only int ,byte,short,char and string and enums
+
+
+
+                 5.Nested if statement
+                   syntax:
+                   if(condition){
+                     if(condition){
+                            ...
+                     }
+                   }
+
+
+    2.Looping Statements
+    --------------------
+             - statements(block of code) will execute multiple times based on condition
+             Types:
+              1.while loop
+                  syntax:
+                  while(condition){
+                      // block of code will execute
+                  }
+
+              2.do-while loop
+                  syntax:
+                  do{
+                      // block of code will execute
+                  }while(condition);
+
+---------------------------------------------------------------------------------------
+                            while                                     do-while
+           ----------------------------------------------------------------------------
+no of iterations            0                                            1
+reason                   it will check the condition,     it will execute the code 
+                         if condition satisfy,            without checking the condition
+                         block of code will execute       for the first time.
+           ------------------------------------------------------------------------------       
+
+              3.for loop:
+             
+             syntax:
+             for(initialization;condition;updation){
+                 //code will execute 
+             }
+                
+Note: initialization, condition and updation are optional
+      
+       //initialization
+       for(;;){
+        //condition
+        //updation
+       }
+
+
+
+              4.for-each loop(advanced for loop)
+              syntax:
+              for(datatype variableName:arrayName){
+                  //code will execute
+              }
+
+          -------------------------------------------------------------
+          for                                      foreach
+    --------------------------------------------------------------
+    initialization,condition,updation
+     is required                               is not required 
+     performed only slow                       performed fast 
+    ---------------------------------------------------------------
+        
+              5.nested loop:loop inside another loop
+
+  3.Other Statements:
+  -------------------
+             1.input statements:
+                   Scanner sc=new Scanner(System.in);
+                   byte a=sc.nextByte();
+                   short b=sc.nextShort();
+                   int c=sc.nextInt();
+                   long d=sc.nextLong();
+                   float e=sc.nextFloat();
+                   double f=sc.nextDouble();
+                   char g=sc.next().charAt(0);
+                   String s=sc.next();
+                   boolean h=sc.nextBoolean();
+             2.Output statements:
+                   System.out.println(); -it will print the value 
+                                         and move the cursor to next line
+                                         -empty value is also accepted
+                   System.out.print(); -it will print the value and 
+                                        not move the cursor to next line
+                                        -empty value will not accepted
+                  ex: System.out.println();//CTS
+                      System.out.print();//CTE
+            3.break statement:
+                   it is used to terminate the flow
+                   ex: break;
+            4.continue statement:
+                   it is used to skip the current iteration and continue the flow
+                   ex: continue;
+
+                    
+
+
+
+------------------------------------------------------------------------- 
+Arrays : 
+        -arrays are used to store multiple values in a single variable
+        ex: int []arr={1,2,3,4};
+        -arrays will store same data type values
+        ex: int []arr={1,2,3,4};
+            String []arr={"a","b","c","d"};
+        -arrays are fixed in size;
+        -non primitive data types.
+    1.Creation of Arrays:
+        -declaring an array
+        -initializing an array
+      ex: int []arr={1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]; //declaring and providing a size
+          int []arr=new int[]{1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]{1,2,3,4,5}; //declaring and providing a size
+
+    2.Accessing Arrays:
+        -accessing through index position
+        -accessing through for loop or for each loop
+
+Arrays class Methods:
+   -Arrays is a class present in java.util package
+   -it consist n number of static methods.
+
+   1.Arrays.toString(): used to print the values of an array
+       syntax:
+       System.out.println(Arrays.toString(arr));
+
+   2.Arrays.sort(): used to sort the values of an array
+      syntax:
+      Arrays.sort(arr); //ascending order
+      Arrays.sort(arr,Collections.reverseOrder());//descending order
+
+   3.Arrays.equals(): used to compare two arrays and returns true if 
+                     they are equal or  returns false
+      syntax:
+      boolean b=Arrays.equals(arr1,arr2);
+    
+    4.Arrays.mismatch(): used to compare two arrays and if it is same
+                         it returns the index of first element or else
+                         it returns -1
+      syntax:
+      int index=Arrays.mismatch(arr1,arr2); 
+    5.Arrays.binarySearch(): used to search an element in an array,
+                            if element is present it returns the index
+                            of that element or else it returns negative number
+        Note: it is applicable only for sorted arrays 
+      syntax:
+      int index=Arrays.binarySearch(arr,element);
+     6.Arrays.copyOfRange(): used to create a copy of an array based on copyOfRange
+        syntax:
+        int []arr1=Arrays.copyOf(arr,startingIndex,endingIndex-excluding);    
+                    
+
+Multidimensional Arrays:
+           -array of arrays
+           -declaring and initializing a multidimensional array
+        
+        int [][]arr={{1,2,3},{4,5,6},{7,8,9}}; // 2D array
+        int [][]arr=new int[3][3]; //declaring and providing a size
+
+        int [][]arr={{1,2,3},{4,5},{5,6,7,8}}// jagged arrays
+         // different rows have different number of columns
+
+  Arrays.deepToString(): used to print the values of a multidimensional array
+----------------------------------------------------------------------------------
+
+String :
+        -String is a class present in java.lang package
+        -it is used to store a sequence of characters
+        -it is immutable
+        -it is a non primitive data type
+    
+    creation of String :
+             1.with string literal
+             2.with string constructor
+
+        1.with string literal:
+            String s1="hello"; //it will create in constant pool area/string constant area
+            String s2="hello";
+            System.out.println(s1==s2);//true 
+
+        2.with string constructor:
+            String s2=new String("hello"); //it will create in heap area
+            String s3=new String("hello");
+            System.out.println(s2==s3);//false
+
+String methods:
+            1.length(): used to get the length of a string
+            2.charAt(index position): used to get the character at a particular index position ,
+                                    if index is out of range then it will throw 
+                                    an exception(StringIndexOutOfBoundsException)
+
+            3.substring(stating index,ending index): used to get a substring/part of a string
+            4.toCharArray(): used to convert a string to an array of characters
+            5.indexOf('a'): used to get the  first index of a character in a string,
+                           if character is not present then it will return -1
+            6.lastIndexOf('a'): used to get the last index of a character in a string,
+                           if character is not present then it will return -1
+            7.contains("abc"): used to check if a string contains a substring,if 
+                              it is present then it will return true or else it will return false
+            8.startsWith("abc"): used to check if a string starts with a substring,if 
+                              it is present then it will return true or else it will return false
+            9.endsWith("abc"): used to check if a string ends with a substring,if 
+                              it is present then it will return true or else it will return false
+            10.toUpperCase(): used to convert a string to uppercase
+            11.toLowerCase(): used to convert a string to lowercase
+            12.trim(): used to remove the leading and trailing spaces from a string
+            13.split(" "): used to split a string into an array of substrings based 
+                          on a delimiter
+            14.equals("abc"): used to check if a string is equal to another string, if 
+                             it is equal then it will return true or else it will return false
+            15.equalsIgnoreCase("abc"): used to check if a string is equal to another string
+                                        ignoring the case, if it is equal then it will return true
+                                        or else it will return false
+            16.matches("abc"): used to check if a string matches a regular expression, if
+                              it matches then it will return true or else it will return false
+            17.compareTo("abc"): used to compare two strings,
+                                if they are equal then it will return 0,
+                                if first string is less than second string then it will return -1,
+                                if first string is greater than second string then it will return 1
+                             
+
+limitations of String :
+           - Strings are immutable in java , so  if we modify (add,delete,replace)
+             a string then a new string will be created and the old string will be
+             garbage collected
+          - so, we use string builder and string buffer to modify a string
+ 
+------------------------------------------------------------------------------------
+                  String             StringBuffer               StringBuilder
+    -------------------------------------------------------------------------------
+mutability       immutable           mutable                    mutable
+thread safe      not applicable      applicable                 not applicable
+performance      slow                fast                       fast
+use case         general purpose     multi-thread              single-thread 
+
+----------------------------------------------------------------------------------
+Methods in StringBuffer and StringBuilder:
+          -both are classes present in java.lang package
+          -they are used to modify a string
+          -they are thread safe (StringBuffer) and (StringBuilder) are not thread safe
+ 
+ 1.append(): used to add a character or a string at the end of a string
+ 2.insert(): used to insert a character or a string at a particular index position
+        syntax:
+        sb.insert(index,character);
+        sb.insert(index,string);
+ 3.replace(): used to replace a character or a string at a particular index position
+        syntax:
+        sb.replace(start,end,character);
+        sb.replace(start,end,string);
+4.delete(): used to delete a character or a string at a particular index position
+        syntax:
+        sb.delete(start,end);
+5.deleteCharAt(): used to delete a character at a particular index position
+        syntax:
+        sb.deleteCharAt(index);
+6.reverse(): used to reverse a string
+        syntax:
+        sb.reverse();
+7.length(): used to get the length of a string
+        syntax:
+        sb.length();
+8.setLength(): used to set the length of a string
+        syntax:
+        sb.setLength(length);
+9.substring(): used to get a substring/part of a string
+        syntax:
+        sb.substring(start,end);
+10.toString(): used to convert a string to a string buffer
+        syntax:
+        sb.toString();
+11.charAt(): used to get the character at a particular index position
+        syntax:
+        sb.charAt(index);
+12.setCharAt(): used to set the character at a particular index position
+        syntax:
+        sb.setCharAt(index,character);
+12.indexOf(): used to get the first index of a character in a string
+        syntax:
+        sb.indexOf(character);
+13.lastIndexOf(): used to get the last index of a character in a string
+15.capacity(): used to get the capacity of a string buffer
+        syntax:
+        sb.capacity();
+16.ensureCapacity(): used to ensure the capacity of a string buffer
+        syntax:
+        sb.ensureCapacity(capacity);    
+
+------------------------------------------------------------------------------------------
+Methods :
+      - it is a block of code that performs a specific task
+      - methods should be enclosed in {}
+      - methods should be declared inside a class or interface or abstract class
+      - methods can invoke/call with the help of method name or method signature
+      - used to reuse the code, increases the reusability, readability of the code
+
+Note : without calling a method ,it will not run
+     : calling method is called method invocation/ method calling statement 
+
+syntax: 
+access modifier  specifier return_type method_name(parameters){
+    
+    ----
+    ----
+    return statement;
+}
+
+method signature: methodName+ parameters/arguments
+method declaration: access modifier+specifier+return_type+method_name+parameters
+method definition: method declaration+body
+
+
+Methods are two types based on arguments:
+----------------------------------------
+1. no-argument methods/zero-argument methods/non parameterized methods
+                ex:
+                public static void m1() {
+                    
+                }
+                m1();//method invocation
+2. argument methods/parameterized methods
+                ex:
+                public static void m1(int a) {
+                    
+                }
+                m1(10);//method invocation
+    
+    -----------------------------------------------------------------------------
+     actual arguments                                formal arguments
+    ------------------------------------------------------------------------------
+parameters passed to a method                        parameters declared in a method
+value/literal/expression                             datatype variableName
+    ------------------------------------------------------------------------------
+
+
+Methods are two types based on return type:
+--------------------------------------------
+1.void methods/non returned methods
+      - method does not return any value to the caller
+      - return type is void
+      - return statement is not mandatory(optional)
+2.non void methods/returned methods
+      - method returns a value/data to the caller
+      - return type is not void(primitive or non primitive)
+      - return statement is mandatory
+      
+Note : return is a keyword 
+       return statement is used to return a value/data to the caller
+       return statement is used to terminate a method
+       return statement must be the last statement in a method
+       more than one return statement is not allowed in a method
+
+
+Method Overloading:
+++++++++++++++++++
+ - multiple methods with same name but different parameters or formal arguments in same class or interface
+is called method overloading
+ - method overloading is used to increase the reusability of code
+
+ Note : number of parameters should be different
+        datatype of parameters should be different
+        order of parameters should be different
+---------------------------------------------------------------------------------------
+
+Class:
+++++++
+    - class is a blue print of an object or a real world entity
+    - class is used to create objects
+    - it consist of variables and methods
+    - it is a collection of related data and functions
+    - class is created by using class keyword
+    - class is a non primitive data type
+
+ex: Bike:  
+     action/method/function :riding(), start(), stop()
+     variable/properties/data :name, color, price
+    
+Object :
+        - object is a real world entity
+        - object is created by using new keyword and class constructor;
+        - object is created in heap memory
+    
+    syntax : 
+    class ClassName{
+        //variables and methods
+    }
+
+    ClassName obj=new ClassName();
+
+Note : static members can call by using Class name
+       Non static members can call by using object reference variable
+
+
+Encapsulation:
+++++++++++++++++
+- it is a process of wrapping/binding the data(variables) and methods
+  into a single unit is called encapsulation
+- hiding the internal state of an object from the outside world(by using access modifiers-private)
+- providing access with the help of getter and setter methods
+
+Note : getter and setter methods are used to access private variables
+       getter are used to get/access/retrieve the value of private variable
+       setter are used to set/assign/write the value of private variable
+       -
+    
